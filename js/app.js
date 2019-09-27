@@ -36,16 +36,9 @@ Vue.component('product', {
 
     </div>
 </div>
-<span v-if="inSale == true">
-    on sale
-</span>
-<span v-else-if="inSale == false">
-    Not on sale
-</span>
+
 <button v-on:click="addToCart" :disabled="!inStock" :class="{disabledButton: !inStock}">Add to Cart</button>
-<button v-on:click="incrementCart" v-if="cart > 0" :disabled="cart<=0">
-    Increment Cart
-</button>
+
 </div>
 `,
 
@@ -124,7 +117,7 @@ Vue.component('product', {
 
     methods: {
         addToCart() {
-            this.$emit('add-to-cart')
+            this.$emit('add-to-cart', this.variants[this.selectedVariant].variantId)
         },
 
         updateProduct(index) {
@@ -142,32 +135,21 @@ Vue.component('product', {
         },
         inStock() {
             return this.variants[this.selectedVariant].variantQuantity
-        },
-        onSale() {
-            return this.variants[this.selectedVariant].inSale
         }
+
     }
 
 })
 
-/*
-Vue.component('cart', {
-    template: `
-
-
-
-`
-})
-*/
 
 var app = new Vue({
     el: '#app',
     data: {
-        cart: 0
+        cart: []
     },
     methods: {
-        updateCart(){
-            this.cart +=1
+        updateCart(id){
+            this.cart.push(id)
         }
     }
 })

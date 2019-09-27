@@ -25,9 +25,9 @@
         </nav>
 
 
-        <div class="cart" v-show="cart > 0">
+        <div class="cart" v-show="cart.length > 0">
                 <div class="basket">
-                    <p>Cart({{ cart }})</p>
+                    <p>Cart({{ cart.length }})</p>
                     <button v-on:click="cart = 0">Reset</button>
                 </div>
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart"
@@ -39,7 +39,6 @@
                 </svg>
                 </div>
 
-        <product @add-to-cart="updateCart"></product>
         <product @add-to-cart="updateCart"></product>
 
     </div>
