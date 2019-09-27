@@ -1,0 +1,10 @@
+h1 {
+  font-size: 2em;
+}
+p {
+  padding: 10px;
+}
+ul li {
+  padding: 5px;
+  list-style: circle;
+}

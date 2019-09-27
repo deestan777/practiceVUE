@@ -1,0 +1,153 @@
+html,
+body {
+    box-sizing: border-box;
+    width     : 100%;
+    height    : 100%;
+    overflow-x: hidden;
+    font-family: monospace;
+}
+
+.disabledButton {
+    background-color: none;
+    opacity         : 0.3;
+}
+
+nav {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    width          : 100vw;
+    height         : 120px;
+    background     : #000;
+    padding        : 0 25px;
+
+    p {
+        color         : white;
+        text-transform: uppercase;
+        font-weight   : 600;
+    }
+}
+
+.logo,
+.cart {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    border         : 0;
+    width          : 20vw;
+    height         : 100%;
+}
+
+.logo {
+    color: #fff;
+
+    h1 {
+        font-weight   : 900;
+        font-size     : 2em;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-weight   : 800;
+        text-transform: capitalize;
+    }
+}
+
+.cart {
+    display        : flex;
+    flex-direction : row;
+    justify-content: flex-end;
+    text-shadow    : 0 0 15px #fff;
+    background     : #000;
+    color          : #fff;
+    position       : fixed;
+    width          : 100%;
+    height         : 5em;
+    bottom         : 0;
+
+
+    .basket {
+        display       : flex;
+        flex-direction: column;
+    }
+
+    svg {
+        margin-right: 25px;
+        color       : #fff;
+        width       : 50px;
+    }
+}
+
+.contacts {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    color          : #fff;
+    font-weight    : 500;
+    text-transform : uppercase;
+    border         : 0;
+    width          : 30vw;
+    height         : 100%;
+
+    a {
+        text-decoration: none;
+        color          : #fff;
+        font-weight    : bolder;
+        margin-left    : 1em;
+    }
+}
+
+.product {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    border         : 0;
+    width          : 25vw;
+    box-shadow: 0 0 5px black;
+    transition: 1s;
+    margin: 20px;
+    &:hover{
+        transform: scale(1.05,1.05);
+        box-shadow: 0 0 15px black;
+        transition:1s;
+    }
+
+    &-image {
+        img {
+            margin-top: 20px;
+            border    : 0;
+            width     : 21vw;
+            height    : 21vw;
+        }
+    }
+
+    .color-switcher {
+        display: inline-flex;
+
+        .color-box {
+            width : 50px;
+            height: 50px;
+        }
+    }
+
+    .size-wrapper {
+        display       : flex;
+        flex-direction: row;
+
+        .size {
+            display       : flex;
+            flex-direction: column;
+            margin        : 5px 5px;
+        }
+    }
+
+    button {
+        width      : 21vw;
+        margin     : 10px 0;
+        padding    : 10px;
+        line-height: inherit;
+    }
+
+}

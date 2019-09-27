@@ -1,0 +1,268 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* FONT OPTIONS */
+/* SPACING VALUES */
+/*ELEMENT SIZE MIX*/
+/* FLEX ELEMENTS OPTIONS */
+h1 {
+  font-size: 2em;
+}
+p {
+  padding: 10px;
+}
+ul li {
+  padding: 5px;
+  list-style: circle;
+}
+html,
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: monospace;
+}
+.disabledButton {
+  background-color: none;
+  opacity: 0.3;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 120px;
+  background: #000;
+  padding: 0 25px;
+}
+nav p {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.logo,
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  width: 20vw;
+  height: 100%;
+}
+.logo {
+  color: #fff;
+}
+.logo h1 {
+  font-weight: 900;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.logo h2 {
+  font-weight: 800;
+  text-transform: capitalize;
+}
+.cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-shadow: 0 0 15px #fff;
+  background: #000;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  height: 5em;
+  bottom: 0;
+}
+.cart .basket {
+  display: flex;
+  flex-direction: column;
+}
+.cart svg {
+  margin-right: 25px;
+  color: #fff;
+  width: 50px;
+}
+.contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 0;
+  width: 30vw;
+  height: 100%;
+}
+.contacts a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bolder;
+  margin-left: 1em;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  width: 25vw;
+  box-shadow: 0 0 5px black;
+  transition: 1s;
+  margin: 20px;
+}
+.product:hover {
+  transform: scale(1.05, 1.05);
+  box-shadow: 0 0 15px black;
+  transition: 1s;
+}
+.product-image img {
+  margin-top: 20px;
+  border: 0;
+  width: 21vw;
+  height: 21vw;
+}
+.product .color-switcher {
+  display: inline-flex;
+}
+.product .color-switcher .color-box {
+  width: 50px;
+  height: 50px;
+}
+.product .size-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.product .size-wrapper .size {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 5px;
+}
+.product button {
+  width: 21vw;
+  margin: 10px 0;
+  padding: 10px;
+  line-height: inherit;
+}
